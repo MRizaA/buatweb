@@ -3,11 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Riza.dev — Jasa Pembuatan Website & Aplikasi Custom</title>
-<meta name="description" content="Jasa pembuatan website dan aplikasi custom. Landing page, web app dengan CRUD & login, sampai aplikasi profesional dengan payment gateway. Harga jelas dari awal.">
+<title>Karuna — Jasa Pembuatan Website & Aplikasi Custom Profesional</title>
+<meta name="description" content="Karuna membantu bisnismu tampil profesional secara online. Landing page, web app dengan login & database, hingga aplikasi e-commerce lengkap dengan payment gateway. Harga transparan, bisa dinego, desain custom sepenuhnya.">
+<meta name="keywords" content="jasa pembuatan website, jasa website murah, landing page, web app custom, jasa aplikasi e-commerce, payment gateway Indonesia, Karuna">
+<meta property="og:title" content="Karuna — Jasa Pembuatan Website & Aplikasi Custom">
+<meta property="og:description" content="Landing page, web app, sampai e-commerce dengan payment gateway. Harga transparan dan bisa dinego, desain custom, revisi bebas selama proses.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="resource/Karuna logo.jpeg">
+<meta name="robots" content="index, follow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Karuna",
+  "description": "Jasa pembuatan website dan aplikasi custom — landing page, web app, hingga e-commerce dengan payment gateway.",
+  "areaServed": "ID",
+  "telephone": "+62-877-6701-7534",
+  "priceRange": "Rp1.000.000 - Rp5.000.000+"
+}
+</script>
 <style>
 
   :root{
@@ -66,7 +83,7 @@
     font-weight:700;font-size:.95rem;transition:transform .25s ease, background .25s ease, box-shadow .25s ease;
     white-space:nowrap;
   }
-  .btn svg{width:18px;height:18px;flex:none;}
+  .btn img.ico{width:18px;height:18px;flex:none;border-radius:0;}
   .btn--primary{background:var(--blue);color:var(--white);box-shadow:var(--shadow-sm);}
   .btn--primary:hover{background:var(--blue-dark);transform:translateY(-2px);box-shadow:var(--shadow-md);}
   .btn--ghost{border:1.5px solid var(--line);color:var(--navy);}
@@ -78,8 +95,9 @@
 
   /* ---------- nav ---------- */
   .nav{position:sticky;top:0;z-index:500;background:rgba(255,255,255,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);}
-  .nav__inner{display:flex;align-items:center;justify-content:space-between;height:56px;}
-  .nav__brand{font-weight:800;font-size:1.05rem;letter-spacing:-.01em;}
+  .nav__inner{display:flex;align-items:center;justify-content:space-between;height:60px;}
+  .nav__brand{display:flex;align-items:center;}
+  .nav__brand img{height:34px;width:auto;}
   .nav__links{display:flex;gap:28px;font-size:.92rem;font-weight:600;color:var(--slate);}
   .nav__links a:hover{color:var(--navy);}
   .nav__actions{display:flex;align-items:center;gap:14px;}
@@ -103,29 +121,27 @@
   }
 
   /* ---------- hero ---------- */
-  .hero{padding-block:120px 0;text-align:center;}
-  .hero__content{max-width:760px;margin-inline:auto;}
-  .hero h1{font-size:clamp(2.6rem,6vw,4.4rem);line-height:1.05;}
+  .hero{padding-block:96px 0;}
+  .hero__grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;}
+  .hero__content{max-width:560px;}
+  .hero h1{font-size:clamp(2.5rem,5vw,3.7rem);line-height:1.08;}
   .hero h1 em{font-style:normal;color:var(--blue);}
-  .hero__sub{margin-top:22px;font-size:1.2rem;color:var(--slate);max-width:46ch;margin-inline:auto;}
-  .hero__cta{display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin-top:36px;}
-
-  .mockup{margin-top:80px;position:relative;}
-  .mockup::before{
-    content:"";position:absolute;inset:-60px 10% -20px;background:
-      radial-gradient(60% 60% at 50% 30%, rgba(36,85,214,.14), transparent 70%);
+  .hero__sub{margin-top:22px;font-size:1.15rem;color:var(--slate);max-width:48ch;}
+  .hero__cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px;}
+  .hero__visual{position:relative;}
+  .hero__visual::before{
+    content:"";position:absolute;inset:-15%;background:
+      radial-gradient(60% 60% at 55% 40%, rgba(36,85,214,.16), transparent 70%);
     z-index:0;pointer-events:none;
   }
-  .mockup__frame{
-    position:relative;z-index:1;max-width:920px;margin-inline:auto;background:var(--white);
-    border-radius:20px;box-shadow:var(--shadow-lg);border:1px solid var(--line);overflow:hidden;
+  .hero__visual img{position:relative;z-index:1;width:100%;}
+  @media (max-width:900px){
+    .hero__grid{grid-template-columns:1fr;text-align:center;}
+    .hero__content{max-width:640px;margin-inline:auto;}
+    .hero__sub{margin-inline:auto;}
+    .hero__cta{justify-content:center;}
+    .hero__visual{max-width:420px;margin-inline:auto;}
   }
-  .mockup__bar{display:flex;align-items:center;gap:10px;padding:12px 18px;border-bottom:1px solid var(--line);}
-  .mockup__dots{display:flex;gap:6px;flex:none;}
-  .mockup__dots span{width:9px;height:9px;border-radius:50%;background:var(--line);}
-  .mockup__url{flex:1;text-align:center;font-size:.78rem;color:var(--slate-light);background:var(--mist);border-radius:100px;padding:5px 14px;margin-inline:60px;}
-  @media (max-width:640px){.mockup__url{margin-inline:20px;}}
-  .mockup__frame img{width:100%;display:block;}
 
   /* ---------- trust ---------- */
   .trust__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;}
@@ -138,9 +154,10 @@
   /* ---------- pricing ---------- */
   .pricing__note{
     display:inline-flex;align-items:center;gap:8px;background:#EAF0FE;color:var(--blue-dark);
-    font-size:.85rem;font-weight:700;padding:8px 16px;border-radius:100px;margin-bottom:28px;
+    font-size:.85rem;font-weight:700;padding:8px 16px;border-radius:100px;margin-bottom:14px;
   }
-  .pricing__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;align-items:stretch;}
+  .pricing__note--neg{background:#FEF0DC;color:#9A5B0A;margin-left:10px;}
+  .pricing__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;align-items:stretch;margin-top:28px;}
   .price-card{
     background:var(--white);border-radius:24px;padding:38px 32px;border:1px solid var(--line);
     box-shadow:var(--shadow-sm);display:flex;flex-direction:column;transition:transform .3s ease, box-shadow .3s ease;
@@ -162,6 +179,7 @@
     .price-card--highlight:hover{transform:translateY(-6px);}
   }
   .pricing__footnote{margin-top:36px;font-size:.88rem;color:var(--slate-light);max-width:70ch;}
+  .pricing__footnote strong{color:var(--slate);}
 
   /* ---------- proses ---------- */
   .proses__list{display:flex;flex-direction:column;}
@@ -182,7 +200,9 @@
   .folio-card__tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px;}
   .folio-card__tags span{font-size:.76rem;font-weight:700;color:var(--blue-dark);background:#EAF0FE;padding:5px 12px;border-radius:100px;}
   .folio-card__body h3{font-size:1.5rem;margin-bottom:12px;}
-  .folio-card__body p{color:var(--slate);font-size:.98rem;margin-bottom:24px;}
+  .folio-card__body p{color:var(--slate);font-size:.98rem;margin-bottom:20px;}
+  .folio-gallery{display:flex;gap:10px;margin-bottom:24px;}
+  .folio-gallery img{width:84px;height:60px;object-fit:cover;border-radius:10px;border:1px solid var(--line);}
   @media (max-width:780px){.folio-card{grid-template-columns:1fr;}.folio-card__img{aspect-ratio:16/10;}}
 
   /* ---------- cta band ---------- */
@@ -210,6 +230,8 @@
   /* ---------- footer ---------- */
   .footer{padding-block:56px 30px;}
   .footer__inner{display:flex;flex-wrap:wrap;justify-content:space-between;gap:36px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.12);}
+  .footer__brand-top{display:flex;align-items:center;gap:10px;}
+  .footer__brand-top img{height:30px;width:auto;}
   .footer__brand-name{font-weight:800;font-size:1.1rem;}
   .footer__brand p{margin-top:10px;color:#AAB4C8;font-size:.92rem;max-width:260px;}
   .footer__links{display:flex;flex-direction:column;gap:12px;font-size:.9rem;color:#AAB4C8;}
@@ -224,7 +246,7 @@
     background:var(--blue);color:var(--white);display:flex;align-items:center;justify-content:center;
     box-shadow:0 14px 30px -10px rgba(36,85,214,.55);transition:transform .25s ease, box-shadow .25s ease;
   }
-  .floating-wa svg{width:24px;height:24px;}
+  .floating-wa img{width:26px;height:26px;}
   .floating-wa:hover{transform:translateY(-3px) scale(1.05);}
 
   .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease, transform .7s ease;}
@@ -242,7 +264,9 @@
 <!-- ============ NAV ============ -->
 <header class="nav" id="nav">
   <div class="container nav__inner">
-    <a href="#top" class="nav__brand">Riza.dev</a>
+    <a href="#top" class="nav__brand" aria-label="Karuna — beranda">
+      <img src="resource/Karuna%20text%20transparant.png" alt="Karuna">
+    </a>
     <nav class="nav__links" id="navLinks">
       <a href="#layanan">Layanan</a>
       <a href="#proses">Proses</a>
@@ -250,8 +274,8 @@
       <a href="#faq">FAQ</a>
     </nav>
     <div class="nav__actions">
-      <a class="btn btn--primary btn--sm" href="https://wa.me/6287767017534?text=Halo%2C%20saya%20mau%20tanya-tanya%20soal%20jasa%20pembuatan%20website." target="_blank" rel="noopener">
-        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 31 L11.5 23.5 C9 20 8 16.5 9 13 C11 6 19 3 25.5 6.5 C32 10 34 18 30.5 24 C27 30 19 32.5 13 30 Z"/><path d="M15 15.5 C15 19 20 24 23.5 24"/></svg>
+      <a class="btn btn--primary btn--sm" href="https://wa.me/6287767017534?text=Halo%20Karuna%2C%20saya%20mau%20tanya-tanya%20soal%20jasa%20pembuatan%20website." target="_blank" rel="noopener">
+        <img class="ico" src="resource/whatsapp.png" alt="">
         <span class="btn-label">Chat WhatsApp</span>
       </a>
       <button class="nav__toggle" id="navToggle" aria-label="Buka menu navigasi" aria-expanded="false">
@@ -263,28 +287,21 @@
 
 <!-- ============ HERO ============ -->
 <section class="hero" id="top">
-  <div class="container hero__content">
-    <p class="eyebrow">Jasa Website &amp; Aplikasi Custom</p>
-    <h1>Website yang beneran <em>kepake.</em></h1>
-    <p class="hero__sub">Dari landing page sampai aplikasi dengan pembayaran online. Desain custom, harga jelas dari awal, progress kelihatan sampai selesai.</p>
-    <div class="hero__cta">
-      <a class="btn btn--primary" href="https://wa.me/6287767017534?text=Halo%2C%20saya%20mau%20tanya-tanya%20soal%20jasa%20pembuatan%20website." target="_blank" rel="noopener">
-        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 31 L11.5 23.5 C9 20 8 16.5 9 13 C11 6 19 3 25.5 6.5 C32 10 34 18 30.5 24 C27 30 19 32.5 13 30 Z"/><path d="M15 15.5 C15 19 20 24 23.5 24"/></svg>
-        Chat via WhatsApp
-      </a>
-      <a class="btn btn--ghost" href="#portofolio">Lihat Portofolio</a>
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="mockup reveal">
-      <div class="mockup__frame">
-        <div class="mockup__bar">
-          <div class="mockup__dots"><span></span><span></span><span></span></div>
-          <span class="mockup__url">mrizaa.github.io/Landingpage_coffeeshop</span>
-        </div>
-        <img src="resource/portfolio-kopisenja.jpg" alt="Preview landing page Kopi Senja, salah satu project yang sudah dikerjakan" loading="lazy">
+  <div class="container hero__grid">
+    <div class="hero__content">
+      <p class="eyebrow">Jasa Pembuatan Website &amp; Aplikasi Custom</p>
+      <h1>Website yang bikin bisnismu <em>dipercaya</em>, bukan cuma dilihat.</h1>
+      <p class="hero__sub">Karuna merancang dan membangun website serta aplikasi dari nol — mulai dari landing page satu halaman sampai aplikasi e-commerce dengan pembayaran online. Desain custom sepenuhnya, harga jelas dari awal, dan kamu tahu progressnya setiap saat.</p>
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="https://wa.me/6287767017534?text=Halo%20Karuna%2C%20saya%20mau%20tanya-tanya%20soal%20jasa%20pembuatan%20website." target="_blank" rel="noopener">
+          <img class="ico" src="resource/whatsapp.png" alt="">
+          Chat via WhatsApp
+        </a>
+        <a class="btn btn--ghost" href="#portofolio">Lihat Portofolio</a>
       </div>
+    </div>
+    <div class="hero__visual reveal">
+      <img src="resource/ilustrasi%20laptop.png" alt="Ilustrasi laptop menampilkan hasil pengembangan website Karuna" loading="lazy">
     </div>
   </div>
 </section>
@@ -299,13 +316,13 @@
     <div class="trust__grid">
       <div class="trust__card reveal">
         <p class="trust__num">Harga</p>
-        <h3>Jelas dari awal</h3>
-        <p>Semua paket & kisaran harga ada di halaman ini. Nggak perlu chat dulu cuma buat tau mulai dari berapa.</p>
+        <h3>Transparan &amp; bisa dinego</h3>
+        <p>Kisaran harga tiap paket ada di halaman ini, bukan angka mati. Kamu bisa diskusikan sesuai kebutuhan dan budget sebelum sepakat.</p>
       </div>
       <div class="trust__card reveal">
-        <p class="trust__num">Progress</p>
-        <h3>Kamu selalu tau statusnya</h3>
-        <p>Update rutin selama pengerjaan — bukan hilang sampai tiba-tiba selesai (atau nggak selesai-selesai).</p>
+        <p class="trust__num">Desain</p>
+        <h3>Custom, bebas revisi selama proses</h3>
+        <p>Tampilan dirancang dari nol sesuai identitas bisnismu, dan bisa terus disesuaikan selama masa pengerjaan berlangsung.</p>
       </div>
       <div class="trust__card reveal">
         <p class="trust__num">Kepemilikan</p>
@@ -322,7 +339,7 @@
     <div class="section__head reveal">
       <p class="eyebrow">Layanan &amp; Harga</p>
       <h2>Tiga paket, titik awal yang jelas.</h2>
-      <p class="section__sub">Harga di bawah ini bukan angka mati — ini titik awal diskusi. Butuh fitur khusus atau integrasi ke layanan berbayar pihak ketiga? Kita hitung bareng, transparan dari awal.</p>
+      <p class="section__sub">Harga di bawah ini adalah kisaran awal untuk didiskusikan, bukan harga final. Setiap paket bebas custom tampilan dan revisi selama proses pengerjaan — mau request fitur apa pun boleh, kita bicarakan dulu bareng-bareng.</p>
     </div>
 
     <div class="pricing__grid">
@@ -331,43 +348,42 @@
         <p class="price-card__price">Rp1.000.000<span> mulai dari</span></p>
         <p class="price-card__desc">Satu halaman fokus konversi — cocok buat promosi produk, jasa, atau profil usaha.</p>
         <ul class="price-card__list">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 L9 17 L4 12"/></svg> Desain custom, bukan template</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 L9 17 L4 12"/></svg> Landing page 1 halaman</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 L9 17 L4 12"/></svg> Desain custom sesuai brand kamu</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 L9 17 L4 12"/></svg> CTA WhatsApp / form kontak</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 L9 17 L4 12"/></svg> Responsif di semua perangkat</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 L9 17 L4 12"/></svg> 2x revisi minor</li>
         </ul>
-        <a class="btn btn--ghost btn--block" href="https://wa.me/6287767017534?text=Halo%2C%20saya%20tertarik%20paket%20Landing%20Page%20(mulai%20Rp1%20juta).%20Boleh%20tanya-tanya%3F" target="_blank" rel="noopener">Tanya Paket Ini</a>
+        <a class="btn btn--ghost btn--block" href="https://wa.me/6287767017534?text=Halo%20Karuna%2C%20saya%20tertarik%20paket%20Landing%20Page%20(mulai%20Rp1%20juta).%20Boleh%20tanya-tanya%3F" target="_blank" rel="noopener">Tanya Paket Ini</a>
       </div>
 
       <div class="price-card price-card--highlight reveal">
         <p class="price-card__name">Web App Sederhana</p>
         <p class="price-card__price">Rp3.000.000<span> mulai dari</span></p>
-        <p class="price-card__desc">Multi-halaman dengan data yang bisa kamu kelola sendiri.</p>
+        <p class="price-card__desc">Landing page dengan beberapa halaman dan fitur ringan yang butuh database sederhana.</p>
         <ul class="price-card__list">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 L9 17 L4 12"/></svg> Sampai 5–6 halaman</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 L9 17 L4 12"/></svg> CRUD dasar (kelola data sendiri)</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 L9 17 L4 12"/></svg> Login admin / user</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 L9 17 L4 12"/></svg> Checkout manual (transfer + konfirmasi)</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 L9 17 L4 12"/></svg> Hosting gratis, domain dibantu dicarikan*</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 L9 17 L4 12"/></svg> Beberapa halaman sesuai kebutuhan</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 L9 17 L4 12"/></svg> Database sederhana (login, form data, dll)</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 L9 17 L4 12"/></svg> Fitur ringan sesuai request</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 L9 17 L4 12"/></svg> Hosting dasar termasuk</li>
         </ul>
-        <a class="btn btn--primary btn--block" href="https://wa.me/6287767017534?text=Halo%2C%20saya%20tertarik%20paket%20Web%20App%20Sederhana%20(mulai%20Rp3%20juta).%20Boleh%20tanya-tanya%3F" target="_blank" rel="noopener">Tanya Paket Ini</a>
+        <a class="btn btn--primary btn--block" href="https://wa.me/6287767017534?text=Halo%20Karuna%2C%20saya%20tertarik%20paket%20Web%20App%20Sederhana%20(mulai%20Rp3%20juta).%20Boleh%20tanya-tanya%3F" target="_blank" rel="noopener">Tanya Paket Ini</a>
       </div>
 
       <div class="price-card reveal">
         <p class="price-card__name">Aplikasi Profesional</p>
         <p class="price-card__price">Rp5.000.000<span> mulai dari</span></p>
-        <p class="price-card__desc">Untuk jualan online serius — pembayaran otomatis sampai ongkir.</p>
+        <p class="price-card__desc">Level profesional seperti e-commerce — untuk jualan online serius, dari pembayaran sampai ongkir.</p>
         <ul class="price-card__list">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 L9 17 L4 12"/></svg> Semua fitur Web App Sederhana</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 L9 17 L4 12"/></svg> Payment gateway otomatis (Midtrans/Xendit dkk)</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 L9 17 L4 12"/></svg> Integrasi ongkir</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 L9 17 L4 12"/></svg> Dashboard admin lengkap</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 L9 17 L4 12"/></svg> Beberapa halaman, level e-commerce</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 L9 17 L4 12"/></svg> Database sedikit lebih kompleks</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 L9 17 L4 12"/></svg> Payment gateway (Midtrans/Xendit dkk)</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 L9 17 L4 12"/></svg> Integrasi ongkir/shipping</li>
         </ul>
-        <a class="btn btn--ghost btn--block" href="https://wa.me/6287767017534?text=Halo%2C%20saya%20tertarik%20paket%20Aplikasi%20Profesional%20(mulai%20Rp5%20juta).%20Boleh%20tanya-tanya%3F" target="_blank" rel="noopener">Tanya Paket Ini</a>
+        <a class="btn btn--ghost btn--block" href="https://wa.me/6287767017534?text=Halo%20Karuna%2C%20saya%20tertarik%20paket%20Aplikasi%20Profesional%20(mulai%20Rp5%20juta).%20Boleh%20tanya-tanya%3F" target="_blank" rel="noopener">Tanya Paket Ini</a>
       </div>
     </div>
 
-    <p class="pricing__footnote reveal">*Harga belum termasuk domain dan biaya layanan pihak ketiga (payment gateway, API berbayar, dll). Biaya transaksi payment gateway ditanggung pemilik bisnis, terpisah dari biaya development. Butuh fitur di luar daftar ini? Chat kami, kita diskusikan dan hitung bareng.</p>
+    <p class="pricing__footnote reveal"><strong>Catatan:</strong> Semua harga di atas adalah titik awal dan masih bisa dinego sesuai kebutuhan — belum termasuk domain dan biaya layanan pihak ketiga (payment gateway, API berbayar, dll). Kamu bebas custom tampilan dan minta revisi selama proses pengerjaan, serta bebas request fitur apa pun — untuk fitur yang cukup kompleks, akan ada penyesuaian biaya tambahan yang didiskusikan dulu sebelum dikerjakan.</p>
   </div>
 </section>
 
@@ -385,15 +401,15 @@
       </div>
       <div class="proses__item reveal">
         <span class="proses__num">02</span>
-        <div><h3>Kesepakatan &amp; DP</h3><p>Kita sepakati scope, harga, dan timeline. Mulai kerja setelah DP.</p></div>
+        <div><h3>Kesepakatan &amp; DP</h3><p>Kita sepakati scope, harga (bisa dinego), dan timeline. Mulai kerja setelah DP.</p></div>
       </div>
       <div class="proses__item reveal">
         <span class="proses__num">03</span>
-        <div><h3>Desain &amp; pengembangan</h3><p>Dikerjakan bertahap. Kamu bisa pantau progressnya secara berkala.</p></div>
+        <div><h3>Desain &amp; pengembangan</h3><p>Dikerjakan bertahap, kamu bisa pantau progressnya dan minta custom tampilan kapan saja.</p></div>
       </div>
       <div class="proses__item reveal">
         <span class="proses__num">04</span>
-        <div><h3>Revisi</h3><p>Kita sesuaikan sampai kamu puas, sesuai jumlah revisi di paket.</p></div>
+        <div><h3>Revisi</h3><p>Bebas revisi selama proses pengerjaan, sampai kamu benar-benar puas.</p></div>
       </div>
       <div class="proses__item reveal">
         <span class="proses__num">05</span>
@@ -414,16 +430,20 @@
 
     <div class="folio-card reveal">
       <div class="folio-card__img">
-        <img src="resource/portfolio-kopisenja.jpg" alt="Tampilan landing page Kopi Senja" loading="lazy">
+        <img src="resource/screenshot%20full%20landingpage%20coffeshop.png" alt="Tampilan landing page Kopi Senja" loading="lazy">
       </div>
       <div class="folio-card__body">
         <div class="folio-card__tags">
           <span>Landing Page</span>
+          <span>Menu &amp; Pembelian</span>
           <span>CTA WhatsApp</span>
-          <span>Google Maps</span>
         </div>
         <h3>Kopi Senja — Landing Page Kedai Kopi</h3>
-        <p>Landing page satu halaman untuk kedai kopi, lengkap dengan menu, CTA pemesanan via WhatsApp, dan lokasi Google Maps. Dibangun dari nol dengan desain custom.</p>
+        <p>Landing page kedai kopi lengkap dengan halaman menu dan alur pemesanan, CTA WhatsApp, dan lokasi Google Maps. Dibangun dari nol dengan desain custom.</p>
+        <div class="folio-gallery">
+          <img src="resource/Screenshot%20landingpage%20coffeshop.png" alt="Detail beranda landing page Kopi Senja" loading="lazy">
+          <img src="resource/Screenshot%20produk%20coffeshop.png" alt="Halaman menu produk Kopi Senja" loading="lazy">
+        </div>
         <a class="btn btn--primary" href="https://mrizaa.github.io/Landingpage_coffeeshop/" target="_blank" rel="noopener">Lihat Demo Langsung →</a>
       </div>
     </div>
@@ -435,10 +455,10 @@
   <div class="container">
     <p class="eyebrow reveal">Mulai Dari Mana Saja</p>
     <h2 class="reveal">Ada ide website atau aplikasi?</h2>
-    <p class="section__sub reveal">Cerita dulu aja — nggak perlu udah fix konsepnya. Kita bantu susun dari sana.</p>
+    <p class="section__sub reveal">Cerita dulu aja — nggak perlu udah fix konsepnya. Kita bantu susun dari sana, termasuk soal budget.</p>
     <div class="cta-band__actions reveal">
-      <a class="btn btn--primary" href="https://wa.me/6287767017534?text=Halo%2C%20saya%20mau%20tanya-tanya%20soal%20jasa%20pembuatan%20website." target="_blank" rel="noopener">
-        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 31 L11.5 23.5 C9 20 8 16.5 9 13 C11 6 19 3 25.5 6.5 C32 10 34 18 30.5 24 C27 30 19 32.5 13 30 Z"/><path d="M15 15.5 C15 19 20 24 23.5 24"/></svg>
+      <a class="btn btn--primary" href="https://wa.me/6287767017534?text=Halo%20Karuna%2C%20saya%20mau%20tanya-tanya%20soal%20jasa%20pembuatan%20website." target="_blank" rel="noopener">
+        <img class="ico" src="resource/whatsapp.png" alt="">
         Chat via WhatsApp
       </a>
       <a class="btn btn--ghost-light" href="#layanan">Lihat Paket Harga</a>
@@ -461,19 +481,19 @@
       </details>
       <details>
         <summary>Harga di atas itu final? <span class="plus"></span></summary>
-        <p class="answer">Enggak. Itu titik awal diskusi. Kalau kebutuhanmu lebih sederhana atau lebih kompleks dari cakupan standar, harganya bisa disesuaikan — termasuk kalau ada fitur khusus atau integrasi ke layanan berbayar pihak ketiga.</p>
+        <p class="answer">Bukan. Harga di atas adalah titik awal dan masih bisa dinego sesuai kebutuhan, budget, dan kompleksitas project. Kita diskusikan dulu sebelum sepakat.</p>
       </details>
       <details>
-        <summary>Bagaimana sistem pembayarannya? <span class="plus"></span></summary>
-        <p class="answer">DP di awal setelah kita sepakat soal scope dan harga, pelunasan setelah website selesai dan kamu setujui hasilnya.</p>
+        <summary>Domain dan layanan pihak ketiga termasuk? <span class="plus"></span></summary>
+        <p class="answer">Belum termasuk. Domain custom dan biaya layanan pihak ketiga (payment gateway, API berbayar, dll) ditanggung terpisah oleh pemilik bisnis. Kami bantu carikan dan pasangkan, tapi kepemilikannya sepenuhnya di tangan kamu.</p>
       </details>
       <details>
-        <summary>Domain dan hosting termasuk? <span class="plus"></span></summary>
-        <p class="answer">Hosting dasar termasuk di paket Web App Sederhana dan Aplikasi Profesional. Domain custom tidak termasuk, tapi kami bantu carikan dan pasangkan — biayanya kamu yang tanggung dan domainnya sepenuhnya milikmu.</p>
+        <summary>Bisa minta custom tampilan atau revisi? <span class="plus"></span></summary>
+        <p class="answer">Bisa, bebas. Selama proses pengerjaan berlangsung kamu boleh minta penyesuaian tampilan dan revisi sampai hasilnya sesuai keinginanmu.</p>
       </details>
       <details>
         <summary>Bisa minta fitur di luar paket? <span class="plus"></span></summary>
-        <p class="answer">Bisa. Termasuk integrasi ke layanan berbayar pihak ketiga atau fitur yang nggak umum. Kita diskusikan dulu kebutuhannya, baru kita hitung biaya tambahannya secara terpisah dan transparan.</p>
+        <p class="answer">Bisa, request fitur apa pun boleh. Untuk fitur sederhana biasanya bisa masuk tanpa biaya tambahan, tapi untuk fitur yang cukup kompleks akan ada penyesuaian biaya yang kita diskusikan dan sepakati dulu sebelum dikerjakan.</p>
       </details>
     </div>
   </div>
@@ -483,7 +503,10 @@
 <footer class="footer bg-navy">
   <div class="container footer__inner">
     <div class="footer__brand">
-      <p class="footer__brand-name">Riza.dev</p>
+      <div class="footer__brand-top">
+        <img src="resource/Karuna%20logo%20transparan.png" alt="Karuna">
+        <span class="footer__brand-name">Karuna</span>
+      </div>
       <p>Jasa pembuatan website &amp; aplikasi custom.</p>
     </div>
     <nav class="footer__links">
@@ -498,12 +521,12 @@
     </div>
   </div>
   <div class="container footer__bottom">
-    <p>© 2026 Riza.dev. Semua hak cipta dilindungi.</p>
+    <p>© 2026 Karuna. Semua hak cipta dilindungi.</p>
   </div>
 </footer>
 
-<a class="floating-wa" href="https://wa.me/6287767017534?text=Halo%2C%20saya%20mau%20tanya-tanya%20soal%20jasa%20pembuatan%20website." target="_blank" rel="noopener" aria-label="Chat via WhatsApp">
-  <svg viewBox="0 0 40 40" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 31 L11.5 23.5 C9 20 8 16.5 9 13 C11 6 19 3 25.5 6.5 C32 10 34 18 30.5 24 C27 30 19 32.5 13 30 Z"/><path d="M15 15.5 C15 19 20 24 23.5 24"/></svg>
+<a class="floating-wa" href="https://wa.me/6287767017534?text=Halo%20Karuna%2C%20saya%20mau%20tanya-tanya%20soal%20jasa%20pembuatan%20website." target="_blank" rel="noopener" aria-label="Chat via WhatsApp">
+  <img src="resource/whatsapp.png" alt="">
 </a>
 
 <script>
