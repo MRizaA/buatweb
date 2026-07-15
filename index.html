@@ -59,6 +59,7 @@
 
   *,*::before,*::after{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
+  html{overflow-x:hidden;}
   body{
     margin:0;background:var(--white);color:var(--navy);
     font-family:'Manrope',sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;
@@ -226,6 +227,7 @@
   .cta-band{text-align:left;}
   .cta-band__grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:52px;align-items:center;}
   .cta-band__visual{position:relative;}
+  .cta-band__visual{overflow:hidden;}
   .cta-band__visual::before{
     content:"";position:absolute;inset:-20%;z-index:0;pointer-events:none;
     background:radial-gradient(60% 60% at 50% 40%, rgba(36,85,214,.3), transparent 70%);
